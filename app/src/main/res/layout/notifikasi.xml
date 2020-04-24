@@ -1,143 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        >
-        <View
-            android:layout_width="370dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="17dp"
-            android:background="@drawable/bg_kotak"
-            />
-        <LinearLayout
+        android:layout_marginTop="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_berita"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="-100dp"
-            android:layout_marginLeft="17dp">
-            <TextView
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:layout_alignParentTop="true"
-                android:text="Selamat Pagi !"
-                android:lineSpacingExtra="2sp"
-                android:layout_marginTop="4dp"
-                android:textSize="20sp"
-                android:textColor="#CF000000"
-                android:fontFamily="@font/roboto_bold"
-                />
-            <TextView
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:layout_alignParentTop="true"
-                android:text="Yuk baca berita hari ini biar ga ketinggalan info !"
-                android:lineSpacingExtra="2sp"
-                android:layout_marginTop="4dp"
-                android:textSize="17sp"
-                android:textColor="#CF000000"
-                android:fontFamily="@font/roboto"
-                />
-        </LinearLayout>
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
-        >
-        <View
-            android:layout_width="370dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="17dp"
-            android:background="@drawable/bg_kotak"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="-100dp"
-            android:layout_marginLeft="17dp">
-            <TextView
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:layout_alignParentTop="true"
-                android:text="Selamat Pagi !"
-                android:lineSpacingExtra="2sp"
-                android:layout_marginTop="4dp"
-                android:textSize="20sp"
-                android:textColor="#CF000000"
-                android:fontFamily="@font/roboto_bold"
-                />
-            <TextView
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:layout_alignParentTop="true"
-                android:text="Yuk baca berita hari ini biar ga ketinggalan info !"
-                android:lineSpacingExtra="2sp"
-                android:layout_marginTop="4dp"
-                android:textSize="17sp"
-                android:textColor="#CF000000"
-                android:fontFamily="@font/roboto"
-                />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
-        >
-        <View
-            android:layout_width="370dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="17dp"
-            android:background="@drawable/bg_kotak"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="-100dp"
-            android:layout_marginLeft="17dp">
-            <TextView
-                android:layout_width="280dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:layout_alignParentTop="true"
-                android:text="Selamat Pagi !"
-                android:lineSpacingExtra="2sp"
-                android:layout_marginTop="4dp"
-                android:textSize="20sp"
-                android:textColor="#CF000000"
-                android:fontFamily="@font/roboto_bold"
-                />
-            <TextView
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
-                android:layout_alignParentTop="true"
-                android:text="Yuk baca berita hari ini biar ga ketinggalan info !"
-                android:lineSpacingExtra="2sp"
-                android:layout_marginTop="4dp"
-                android:textSize="17sp"
-                android:textColor="#CF000000"
-                android:fontFamily="@font/roboto"
-                />
-        </LinearLayout>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_row_notifs"/>
+
+    </ScrollView>
+
 </LinearLayout>
