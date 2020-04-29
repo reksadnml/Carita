@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Carita</string>
+
+    <string name="home">Beranda</string>
+    <string name="notif">Notifikasi</string>
+    <string name="search">Cari</string>
+    <string name="setting">Pengaturan</string>
 </resources>
