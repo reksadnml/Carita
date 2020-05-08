@@ -22,14 +22,15 @@
             android:orientation="horizontal"
             android:layout_marginTop="-100dp">
             <ImageView
+                android:id="@+id/news_photo"
                 android:layout_width="70dp"
                 android:layout_height="80dp"
                 android:background="@mipmap/ic_picture"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                ></ImageView>
+                />
             <TextView
-                android:id="@+id/makanan_seh1"
+                android:id="@+id/news_title"
                 android:layout_width="280dp"
                 android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
@@ -49,7 +50,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="-280dp">
                 <TextView
-                    android:id="@+id/desc1"
+                    android:id="@+id/news_content"
                     android:layout_width="270dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
