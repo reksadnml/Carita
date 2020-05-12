@@ -57,12 +57,6 @@ public class SearchFragment extends Fragment implements View.OnClickListener {
         rvNews.setAdapter(listNewsAdapter);
     }
 
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        newsViewModel = ViewModelProviders.of(this).get(NewsViewModel.class);
-    }
-
     private void searchNews (FragmentActivity activity, String category) {
         newsViewModel.setSearchNews(activity, category);
         newsViewModel.getNews().observe(activity, newsList -> {

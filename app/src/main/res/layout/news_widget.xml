@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:padding="@dimen/widget_margin">
+
+    <LinearLayout
+        android:id="@+id/carita_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:background="@drawable/white_background">
+
+        <TextView
+            android:id="@+id/carita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Carita"
+            android:textSize="24sp"
+            android:textColor="#009668"
+            android:gravity="center_horizontal|top"
+            android:fontFamily="@font/abeezee"
+            />
+        <TextView
+            android:id="@+id/baca_berita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:text="Baca Berita"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#B3000000"
+            android:textStyle="italic"
+            android:fontFamily="@font/abeezee"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_widget_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_below="@+id/carita_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/white_background"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/notification_title_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Selamat Pagi !"
+                android:lineSpacingExtra="2sp"
+                android:textSize="12sp"
+                android:textColor="#CF000000"
+                android:fontFamily="@font/roboto_bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_widget_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_below="@+id/list_widget_1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/white_background"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/notification_title_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Selamat Pagi !"
+                android:lineSpacingExtra="2sp"
+                android:textSize="12sp"
+                android:textColor="#CF000000"
+                android:fontFamily="@font/roboto_bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_widget_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_below="@+id/list_widget_2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/white_background"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/notification_title_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Selamat Pagi !"
+                android:lineSpacingExtra="2sp"
+                android:textSize="12sp"
+                android:textColor="#CF000000"
+                android:fontFamily="@font/roboto_bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

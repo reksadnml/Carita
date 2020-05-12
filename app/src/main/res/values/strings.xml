@@ -1,20 +1,31 @@
 <resources>
-    <string name="app_name">Carita</string>
-    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_activity_base">Carita</string>
+
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Notification</string>
+    <string name="title_search">Search</string>
+    <string name="title_settings">Settings</string>
 
-    <string name="home">Beranda</string>
-    <string name="notif">Notifikasi</string>
-    <string name="search">Cari</string>
-    <string name="setting">Pengaturan</string>
+    <string name="choose_category">Choose category </string>
+    <string name="business_tab">Business</string>
+    <string name="sports_tab">Sports</string>
+    <string name="health_tab">Health</string>
+    <string name="tech_tab">Tech</string>
+    <string name="science_tab">Science</string>
+    <string name="search_text">Search news</string>
 
-    <string name="choose_category">Memilih kategori</string>
-    <string name="business_tab">Bisnis</string>
-    <string name="sports_tab">Olahraga</string>
-    <string name="health_tab">Kesehatan</string>
-    <string name="tech_tab">Teknologi</string>
-    <string name="science_tab">Sains</string>
-    <string name="search_text">Cari berita</string>
+    <string name="daily_notification_text">Reminder for user to keep up with our news</string>
+    <string name="daily_notification">Daily Notification</string>
+    <string name="daily_notification_on">Turn on daily notification</string>
+    <string name="daily_notification_off">Turn off daily notification</string>
+    <string name="app_name">Carita</string>
+
+    <string name="choose_language">Choose Language</string>
+    <string name="language">English</string>
+    <string name="clear_notification_history">Notification history cleared</string>
+    <string name="no_notification">No notification</string>
+    <string name="notification_title">Read news on Carita today!</string>
+    <string name="no_internet">No internet connection available</string>
+    <string name="button_clear_notification">Clear Notification</string>
+
 </resources>

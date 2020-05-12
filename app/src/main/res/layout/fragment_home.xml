@@ -56,8 +56,8 @@
             android:paddingRight="24dp">
             <TextView
                 android:id="@+id/business_tab"
-                android:layout_width="41dp"
-                android:layout_height="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:text="@string/business_tab"
@@ -65,11 +65,12 @@
                 android:textSize="14sp"
                 android:textColor="#D9000000"
                 android:fontFamily="@font/roboto"
-                />
+                android:layout_marginRight="16dp"/>
+
             <TextView
                 android:id="@+id/sports_tab"
-                android:layout_width="58dp"
-                android:layout_height="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="22dp"
                 android:layout_alignParentTop="true"
@@ -78,11 +79,12 @@
                 android:textSize="14sp"
                 android:textColor="#D9000000"
                 android:fontFamily="@font/roboto"
-                />
+                android:layout_marginRight="16dp"/>
+
             <TextView
                 android:id="@+id/health_tab"
-                android:layout_width="70dp"
-                android:layout_height="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="22dp"
                 android:layout_alignParentTop="true"
@@ -91,11 +93,12 @@
                 android:textSize="14sp"
                 android:textColor="#D9000000"
                 android:fontFamily="@font/roboto"
-                />
+                android:layout_marginRight="16dp"/>
+
             <TextView
                 android:id="@+id/tech_tab"
-                android:layout_width="70dp"
-                android:layout_height="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="22dp"
                 android:layout_alignParentTop="true"
@@ -104,11 +107,12 @@
                 android:textSize="14sp"
                 android:textColor="#D9000000"
                 android:fontFamily="@font/roboto"
-                />
+                android:layout_marginRight="16dp"/>
+
             <TextView
                 android:id="@+id/science_tab"
-                android:layout_width="38dp"
-                android:layout_height="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="22dp"
                 android:layout_alignParentTop="true"
@@ -116,8 +120,7 @@
                 android:gravity="top"
                 android:textSize="14sp"
                 android:textColor="#D9000000"
-                android:fontFamily="@font/roboto"
-                />
+                android:fontFamily="@font/roboto"/>
         </LinearLayout>
 
     </HorizontalScrollView>

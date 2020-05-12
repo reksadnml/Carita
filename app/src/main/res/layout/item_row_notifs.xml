@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
@@ -10,42 +10,37 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="10dp"
-        >
-        <View
-            android:layout_width="370dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="17dp"
-            android:background="@drawable/bg_kotak"
-            />
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="-100dp"
-            android:layout_marginLeft="17dp">
+            android:background="@drawable/white_background"
+            android:padding="10dp">
+
             <TextView
-                android:layout_width="280dp"
+                android:id="@+id/notification_title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
                 android:layout_alignParentTop="true"
                 android:text="Selamat Pagi !"
                 android:lineSpacingExtra="2sp"
-                android:layout_marginTop="4dp"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textColor="#CF000000"
-                android:fontFamily="@font/roboto_bold"
-                />
+                android:fontFamily="@font/roboto_bold"/>
+
             <TextView
-                android:layout_width="350dp"
+                android:id="@+id/notification_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="10dp"
                 android:layout_alignParentTop="true"
                 android:text="Yuk baca berita hari ini biar ga ketinggalan info !"
                 android:lineSpacingExtra="2sp"
-                android:layout_marginTop="4dp"
-                android:textSize="17sp"
+                android:textSize="14sp"
                 android:textColor="#CF000000"
                 android:fontFamily="@font/roboto"
                 />

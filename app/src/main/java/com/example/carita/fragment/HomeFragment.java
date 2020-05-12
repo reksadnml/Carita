@@ -1,6 +1,7 @@
 package com.example.carita.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,10 +69,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        if (lang == "in-ID") lang = "id";
+        if (lang.equals("id-ID")) lang = "id";
         else lang = "us";
 
-        newsViewModel = ViewModelProviders.of(this).get(NewsViewModel.class);
         showNews(getActivity(), lang, "");
     }
 

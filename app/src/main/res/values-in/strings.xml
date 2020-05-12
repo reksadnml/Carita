@@ -1,0 +1,30 @@
+<resources>
+    <string name="title_activity_base">Carita</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_notifications">Notifikasi</string>
+    <string name="title_search">Cari</string>
+    <string name="title_settings">Pengaturan</string>
+
+    <string name="choose_category">Memilih kategori </string>
+    <string name="business_tab">Bisnis</string>
+    <string name="sports_tab">Olahraga</string>
+    <string name="health_tab">Kesehatan</string>
+    <string name="tech_tab">Teknologi</string>
+    <string name="science_tab">Sains</string>
+    <string name="search_text">Cari berita</string>
+
+    <string name="daily_notification_text">Notifikasi yang mengingatkan pengguna untuk membaca berita</string>
+    <string name="daily_notification">Notifikasi Harian</string>
+    <string name="daily_notification_on">Notifikasi harian dinyalakan</string>
+    <string name="daily_notification_off">Notifikasi harian dimatikan</string>
+    <string name="app_name">Carita</string>
+
+    <string name="choose_language">Pilih Bahasa</string>
+    <string name="language">Bahasa Indonesia</string>
+    <string name="clear_notification_history">Riwayat notifikasi dihapus</string>
+    <string name="no_notification">Tidak ada notifikasi</string>
+    <string name="notification_title">Baca berita di Carita hari ini!</string>
+    <string name="no_internet">Maaf tidak ada koneksi internet</string>
+    <string name="button_clear_notification">Hapus notifikasi</string>
+
+</resources>

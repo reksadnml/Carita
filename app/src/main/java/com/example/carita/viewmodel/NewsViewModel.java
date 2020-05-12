@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -14,7 +13,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.carita.BuildConfig;
+import com.example.carita.R;
 import com.example.carita.dataclass.News;
 
 import org.json.JSONArray;
@@ -23,14 +22,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 import java.text.SimpleDateFormat;
 
-public class NewsViewModel extends ViewModel {
+import static com.example.carita.BuildConfig.NEWS_API_KEY;
 
-    private final String NEWS_API_KEY = "9d8f14bcf23749a3acf0654339332edd";
+public class NewsViewModel extends ViewModel {
 
     private MutableLiveData<ArrayList<News>> newsList = new MutableLiveData<>();
 
@@ -41,8 +39,8 @@ public class NewsViewModel extends ViewModel {
         String url;
 
         if (category == null || category == "")
-            url = "http://newsapi.org/v2/top-headlines?country=us&apiKey=" + NEWS_API_KEY;
-        else url = "http://newsapi.org/v2/top-headlines?country=us&category=" + category + "&apiKey=" + NEWS_API_KEY;
+            url = "http://newsapi.org/v2/top-headlines?country=" + lang + "&apiKey=" + NEWS_API_KEY;
+        else url = "http://newsapi.org/v2/top-headlines?country=" + lang + "&category=" + category + "&apiKey=" + NEWS_API_KEY;
 
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -59,7 +57,6 @@ public class NewsViewModel extends ViewModel {
                         String urlPhoto = news.getString("urlToImage");
                         News itemNews = new News(title, content, link, urlPhoto);
                         list.add(itemNews);
-                        Log.d("check", title);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -70,7 +67,7 @@ public class NewsViewModel extends ViewModel {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, "Maaf tidak ada koneksi internet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getResources().getString(R.string.no_internet), Toast.LENGTH_SHORT).show();
                 Log.d("Error Response", error.toString());
             }
         });
@@ -108,7 +105,7 @@ public class NewsViewModel extends ViewModel {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, "Maaf tidak ada koneksi internet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, context.getResources().getString(R.string.no_internet), Toast.LENGTH_SHORT).show();
                 Log.d("Error Response", error.toString());
             }
         });
