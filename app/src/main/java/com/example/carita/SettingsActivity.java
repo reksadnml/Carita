@@ -10,12 +10,12 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.carita.receiver.ReminderReceiver;
+import com.example.carita.receiver.NotificationReceiver;
 
 import java.util.Calendar;
 
-import static com.example.carita.receiver.ReminderReceiver.EXTRA_TYPE;
-import static com.example.carita.receiver.ReminderReceiver.REMINDER_ID;
+import static com.example.carita.receiver.NotificationReceiver.EXTRA_TYPE;
+import static com.example.carita.receiver.NotificationReceiver.REMINDER_ID;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -41,14 +41,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         newsAlarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
 
         // daily reminder
-        dailyIntent = new Intent(this, ReminderReceiver.class);
+        dailyIntent = new Intent(this, NotificationReceiver.class);
         dailyIntent.putExtra(EXTRA_TYPE, "daily reminder");
         dailyPendingIntent = PendingIntent.getBroadcast(
                 this, REMINDER_ID, dailyIntent, 0);
 
 
         // new news
-        newsIntent = new Intent(this, ReminderReceiver.class);
+        newsIntent = new Intent(this, NotificationReceiver.class);
         newsIntent.putExtra(EXTRA_TYPE, "new news");
         newsPendingIntent = PendingIntent.getBroadcast(
                 this, REMINDER_ID, newsIntent, 0);

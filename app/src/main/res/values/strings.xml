@@ -16,4 +16,5 @@
     <string name="health_tab">Kesehatan</string>
     <string name="tech_tab">Teknologi</string>
     <string name="science_tab">Sains</string>
+    <string name="search_text">Cari berita</string>
 </resources>

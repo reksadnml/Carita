@@ -1,4 +1,4 @@
-package com.example.carita.ui.home;
+package com.example.carita.viewmodel;
 
 import android.content.Context;
 import android.util.Log;
@@ -22,6 +22,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+import java.text.SimpleDateFormat;
 
 public class NewsViewModel extends ViewModel {
 
@@ -75,19 +80,24 @@ public class NewsViewModel extends ViewModel {
     public void setSearchNews(final Context context, String query) {
         final ArrayList<News> list = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url = "";
+        String date = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Calendar.getInstance().getTime());
+        String url = "http://newsapi.org/v2/everything?q=" + query + "&from=" + date + "&to=" + date + "&sortBy=popularity&apiKey=" + NEWS_API_KEY;
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    JSONArray jsonArray = jsonObject.getJSONArray("");
+                    JSONArray jsonArray = jsonObject.getJSONArray("articles");
 
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject news = jsonArray.getJSONObject(i);
-
-                        News itemRegional = new News();
-                        list.add(itemRegional);
+                        String title = news.getString("title");
+                        String content = news.getString("content");
+                        String link = news.getString("url");
+                        String urlPhoto = news.getString("urlToImage");
+                        News itemNews = new News(title, content, link, urlPhoto);
+                        list.add(itemNews);
+                        Log.d("check", title);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

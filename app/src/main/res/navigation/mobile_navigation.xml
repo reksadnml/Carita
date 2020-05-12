@@ -7,25 +7,25 @@
 
     <fragment
         android:id="@+id/navigation_beranda"
-        android:name="com.example.carita.ui.home.HomeFragment"
+        android:name="com.example.carita.fragment.HomeFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_notif"
-        android:name="com.example.carita.ui.home.HomeFragment"
+        android:name="com.example.carita.fragment.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.example.carita.ui.dashboard.DashboardFragment"
+        android:name="com.example.carita.fragment.SearchFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_setting"
-        android:name="com.example.carita.ui.notifications.NotificationsFragment"
+        android:name="com.example.carita.fragment.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

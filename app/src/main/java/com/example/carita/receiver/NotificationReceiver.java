@@ -23,7 +23,7 @@ import com.example.carita.R;
 
 import org.json.JSONObject;
 
-public class ReminderReceiver extends BroadcastReceiver {
+public class NotificationReceiver extends BroadcastReceiver {
 
     public static final String EXTRA_TYPE = "type";
     public static final int REMINDER_ID = 101;

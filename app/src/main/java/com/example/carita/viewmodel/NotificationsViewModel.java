@@ -1,4 +1,4 @@
-package com.example.carita.ui.notifications;
+package com.example.carita.viewmodel;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

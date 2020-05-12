@@ -1,7 +1,6 @@
-package com.example.carita.ui.home;
+package com.example.carita.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.carita.R;
 import com.example.carita.adapter.ListNewsAdapter;
+import com.example.carita.viewmodel.NewsViewModel;
 
 import java.util.Locale;
 
@@ -76,7 +76,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     }
 
     private void showNews(FragmentActivity activity, String lang, String category) {
-        newsViewModel.setNews(getActivity(), lang, category);
+        newsViewModel.setNews(activity, lang, category);
         newsViewModel.getNews().observe(activity, newsList -> {
             if (newsList != null) {
                 listNewsAdapter.setData(newsList);
