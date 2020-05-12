@@ -6,7 +6,7 @@
     <string name="title_search">Search</string>
     <string name="title_settings">Settings</string>
 
-    <string name="choose_category">Choose category </string>
+    <string name="choose_category">Choose category&#160;</string>
     <string name="business_tab">Business</string>
     <string name="sports_tab">Sports</string>
     <string name="health_tab">Health</string>

@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
     private ListNewsAdapter listNewsAdapter;
     private View root;
     private TextView businessTab, sportsTab, healthTab, techTab, scienceTab;
-    private String lang = Locale.getDefault().toLanguageTag();
+    private String lang;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -68,14 +68,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        if (lang.equals("id-ID")) lang = "id";
-        else lang = "us";
-
         showNews(getActivity(), lang, "");
     }
 
     private void showNews(FragmentActivity activity, String lang, String category) {
+        lang = Locale.getDefault().toLanguageTag();
+
+        if (lang.equals("id-ID")) lang = "id";
+        else lang = "us";
+
         newsViewModel.setNews(activity, lang, category);
         newsViewModel.getNews().observe(activity, newsList -> {
             if (newsList != null) {
