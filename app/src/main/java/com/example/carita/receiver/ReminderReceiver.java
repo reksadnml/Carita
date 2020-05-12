@@ -18,12 +18,10 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.carita.MainActivity;
+import com.example.carita.BaseActivity;
 import com.example.carita.R;
 
 import org.json.JSONObject;
-
-import java.text.SimpleDateFormat;
 
 public class ReminderReceiver extends BroadcastReceiver {
 
@@ -68,7 +66,7 @@ public class ReminderReceiver extends BroadcastReceiver {
         String CHANNEL_ID = "Channel_1";
         String CHANNEL_NAME = "Daily Reminder Channel";
 
-        Intent contentIntent = new Intent(context, MainActivity.class);
+        Intent contentIntent = new Intent(context, BaseActivity.class);
         PendingIntent contentPendingIntent = PendingIntent.getActivity(context, REMINDER_ID,
                 contentIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 

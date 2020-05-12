@@ -48,7 +48,7 @@
             android:id="@+id/rv_berita"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_row_berita" />
+            tools:listitem="@layout/item_row_news" />
 
     </ScrollView>
 

@@ -1,6 +1,7 @@
 package com.example.carita.adapter;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,17 +12,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-import com.example.carita.NewsDetail;
+import com.example.carita.NewsDetailActivity;
 import com.example.carita.R;
 import com.example.carita.dataclass.News;
 
 import java.util.ArrayList;
 
 public class ListNewsAdapter extends RecyclerView.Adapter<ListNewsAdapter.ListViewHolder> {
-    ArrayList mData = new ArrayList<News>();
+    private ArrayList mData = new ArrayList<News>();
+    int MAX_CONTENT_LENGTH = 80;
 
-    void setData(ArrayList<News> items) {
+    public void setData(ArrayList<News> items) {
         mData.clear();
         mData.addAll(items);
         notifyDataSetChanged();
@@ -30,7 +31,7 @@ public class ListNewsAdapter extends RecyclerView.Adapter<ListNewsAdapter.ListVi
     @NonNull
     @Override
     public ListNewsAdapter.ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_berita, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_row_news, parent, false);
         return new ListViewHolder(view);
     }
 
@@ -38,16 +39,25 @@ public class ListNewsAdapter extends RecyclerView.Adapter<ListNewsAdapter.ListVi
     public void onBindViewHolder(@NonNull final ListNewsAdapter.ListViewHolder holder, int position) {
         final News data = (News) mData.get(position);
         holder.viewTitle.setText(data.getTitle());
-        holder.viewContent.setText(data.getContent());
+
+        String content = data.getContent();
+
+        // set max content length
+        if (content.length() > MAX_CONTENT_LENGTH) {
+            content = content.substring(0, MAX_CONTENT_LENGTH) + "...";
+            holder.viewContent.setText(content);
+        } else holder.viewContent.setText(content);
+
         Glide.with(holder.itemView.getContext())
-                .load(data.getPhoto())
-                .apply(new RequestOptions().override(70, 80))
+                .load(data.getUrlPhoto())
                 .into(holder.viewPhoto);
+
+        Log.d("check", String.valueOf(data.getTitle()));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(holder.itemView.getContext(), NewsDetail.class);
+                Intent intent = new Intent(holder.itemView.getContext(), NewsDetailActivity.class);
                 intent.putExtra("news parcelable", data);
                 holder.itemView.getContext().startActivity(intent);
             }
@@ -66,9 +76,9 @@ public class ListNewsAdapter extends RecyclerView.Adapter<ListNewsAdapter.ListVi
 
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
-            viewTitle.findViewById(R.id.news_title);
-            viewContent.findViewById(R.id.news_content);
-            viewPhoto.findViewById(R.id.news_photo);
+            viewTitle = itemView.findViewById(R.id.news_title);
+            viewContent = itemView.findViewById(R.id.news_content);
+            viewPhoto = itemView.findViewById(R.id.news_photo);
         }
     }
 }

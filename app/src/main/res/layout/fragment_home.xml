@@ -1,14 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/tv_home"
+    android:layout_height="match_parent"
+    tools:context=".BaseActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/carita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+            android:text="Carita"
+            android:textSize="24sp"
+            android:textColor="#009668"
+            android:gravity="center_horizontal|top"
+            android:fontFamily="@font/abeezee"
+            />
+        <TextView
+            android:id="@+id/baca_berita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:text="Baca Berita"
+            android:lineSpacingExtra="3sp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#B3000000"
+            android:textStyle="italic"
+            android:fontFamily="@font/abeezee"
+            />
+    </LinearLayout>
+
+    <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/home"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:scrollbars="none">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+            <TextView
+                android:id="@+id/business_tab"
+                android:layout_width="41dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/business_tab"
+                android:gravity="top"
+                android:textSize="14sp"
+                android:textColor="#D9000000"
+                android:fontFamily="@font/roboto"
+                />
+            <TextView
+                android:id="@+id/sports_tab"
+                android:layout_width="58dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:layout_alignParentTop="true"
+                android:text="@string/sports_tab"
+                android:gravity="top"
+                android:textSize="14sp"
+                android:textColor="#D9000000"
+                android:fontFamily="@font/roboto"
+                />
+            <TextView
+                android:id="@+id/health_tab"
+                android:layout_width="70dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:layout_alignParentTop="true"
+                android:text="@string/health_tab"
+                android:gravity="top"
+                android:textSize="14sp"
+                android:textColor="#D9000000"
+                android:fontFamily="@font/roboto"
+                />
+            <TextView
+                android:id="@+id/tech_tab"
+                android:layout_width="70dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:layout_alignParentTop="true"
+                android:text="@string/tech_tab"
+                android:gravity="top"
+                android:textSize="14sp"
+                android:textColor="#D9000000"
+                android:fontFamily="@font/roboto"
+                />
+            <TextView
+                android:id="@+id/science_tab"
+                android:layout_width="38dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:layout_alignParentTop="true"
+                android:text="@string/science_tab"
+                android:gravity="top"
+                android:textSize="14sp"
+                android:textColor="#D9000000"
+                android:fontFamily="@font/roboto"
+                />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="60dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_row_news"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"/>
+
+    </ScrollView>
 </LinearLayout>
